@@ -5,8 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 import express, { response } from "express";
 import * as path from "path";
 import { process_doc } from "./lang_script";
-import { new_process } from "./lang2_script";
-//import { OpenAI } from '@langchain/openai';
 import {OpenAIApi, Configuration} from 'openai'
 
 dotenv.config();
@@ -72,14 +70,6 @@ app.post('/upload', upload.single('file'), async (req, res) => {
         return res.status(400).send()
     }
     const response = await process_doc(req.file?.filename, req.body.question)
-    res.send(response)
-})
-////NUEVO
-app.post('/upload2', upload.single('file'), async (req, res) => {
-    if (!req.file || !req.body?.question) {
-        return res.status(400).send()
-    }
-    const response = await new_process(req.file?.filename, req.body.question)
     res.send(response)
 })
 

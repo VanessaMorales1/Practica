@@ -46,12 +46,6 @@ const Navigation = () => {
                     <MaterialCommunityIcons name={'file-pdf-box'} color={color} size={size}/>
                 )
             }}/>
-             <Tab.Screen name={'Nuevo'} component={Nuevo} options={{
-                tabBarLabel: 'nuevo',  color:'red',headerTitleStyle: { color: 'red', fontSize:30, paddingTop:40},
-                tabBarIcon: ({color, size}) => (
-                    <MaterialCommunityIcons name={'file-pdf-box'} color={color} size={size}/>
-                ) 
-            } }/>
            
         </Tab.Navigator>
     )
