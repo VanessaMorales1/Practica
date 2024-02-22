@@ -6,8 +6,8 @@ const Pdf = () => {
     const [pdfDoc, setPdfDoc] = useState()
     const [question, setQuestion] = useState('')
     const [result, setResult] = useState('')
-    const handleFilePicker = async () => {
-        let result = await ExpoDocumentPicker.getDocumentAsync({copyToCacheDirectory: true});
+    const handleFilePicker = async () => {  
+        let result = await ExpoDocumentPicker.getDocumentAsync({copyToCacheDirectory: true, multiple:true} );
         setPdfDoc(result.file)
     }
     const handleUpload = async () => {
