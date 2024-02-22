@@ -43,8 +43,8 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration)
 const generatePrompt = (numberToConvert: number) => {
-    //return `Tu tienes un rol de convertidor binario y requiero que conviertas este número ${numberToConvert} a binario.`;
-    return `quiero saber cuantas vocales tiene el texto ${numberToConvert}`;
+    return `Tu tienes un rol de convertidor binario y requiero que conviertas este número ${numberToConvert} a binario.`;
+    //return `quiero saber cuantas vocales tiene el texto ${numberToConvert}`;
 
 }
 
